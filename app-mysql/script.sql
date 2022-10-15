@@ -11,8 +11,8 @@ SET CHARACTER SET utf8;
 /* *****************************************************************************
 // Create new database
 // ****************************************************************************/
-CREATE DATABASE IF NOT EXISTS gowebapp DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
-USE gowebapp;
+CREATE DATABASE IF NOT EXISTS mydatabase DEFAULT CHARSET = utf8 COLLATE = utf8_unicode_ci;
+USE mydatabase;
 
 /* *****************************************************************************
 // Create the tables
