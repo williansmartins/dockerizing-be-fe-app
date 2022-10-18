@@ -1,0 +1,1 @@
+docker build -t app-mysql:v1 .

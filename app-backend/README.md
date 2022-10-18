@@ -25,12 +25,13 @@ mvn package
 
 5. Build an image
 ```
-docker build -t app-backend:v2 .
+docker build -t app-backend:v1 .
 ``` 
 
 6. Run a instance of image
 ```
 docker run --net mynetwork -t -p 8080:8080 --name app-backend-container app-backend:v1
+docker run --net mynetwork -t -p 8080:8080 --name app-backend-container  app-backend:v1
 ```
 
 6. Test your application (access by a expose port)
