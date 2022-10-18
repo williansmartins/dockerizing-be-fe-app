@@ -12,29 +12,21 @@ cd app-backend
 
 3. Set a Docker file
 ```
-FROM openjdk:8-jdk-alpine
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+<root folder>
 ```
 
-4. Generate image
-```
-mvn package
-```
-
-5. Build an image
+4. Build an image
 ```
 docker build -t app-backend:v1 .
 ``` 
 
-6. Run a instance of image
+5. Run a instance of image
 ```
 docker run --net mynetwork -t -p 8080:8080 --name app-backend-container app-backend:v1
-docker run --net mynetwork -t -p 8080:8080 --name app-backend-container  app-backend:v1
 ```
 
 6. Test your application (access by a expose port)
 ```
-http://ip172-18-0-86-cd4v7rv91rrg00c84q0g-8000.direct.labs.play-with-docker.com/users
+/imagens
+http://ip172-18-0-86-cd4v7rv91rrg00c84q0g-8000.direct.labs.play-with-docker.com/imagens
 ```
