@@ -1,11 +1,11 @@
 # BE - Java
 ```
-. copy of old project
+README.md próprio
 ```
 
-# FE - Angular
+# FE - AngularJS
 ```
-. copy of old project
+README.md próprio
 ```
 
 # Creating a network
