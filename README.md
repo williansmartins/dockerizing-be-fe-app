@@ -1,11 +1,11 @@
 # BE - Java
 ```
-README.md próprio
+README.md on backend project
 ```
 
 # FE - AngularJS
 ```
-README.md próprio
+README.md on frontend project
 ```
 
 # Creating a network
