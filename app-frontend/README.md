@@ -23,7 +23,7 @@ docker build -t app-frontend:v1 .
 
 5. Run a instance of image
 ```
-docker run --name app-frontend-container -d -p 8085:80 app-frontend:v1
+docker run --name app-frontend-container -d -p 80:80 app-frontend:v1
 ```
 
 6. Test your application (access by a expose port)
