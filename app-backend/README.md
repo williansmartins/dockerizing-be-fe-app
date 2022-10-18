@@ -13,17 +13,9 @@ cd app-backend
 3. Set a Docker file
 ```
 FROM openjdk:8-jdk-alpine
-
-RUN apk update && apk upgrade && apk add bash
-RUN mkdir -p /usr/local/dockerize
-
-ADD  @project.build.finalName@.jar /usr/local/dockerize/
-
-ADD run.sh run.sh
-
-RUN chmod +x run.sh
-
-CMD ./run.sh
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
 ```
 
 4. Generate image
