@@ -30,7 +30,7 @@ docker build -t app-backend:v2 .
 
 6. Run a instance of image
 ```
-docker run -t -p 8081:8080 --name app-backend-container2 app-backend:v2
+docker run --net mynetwork -t -p 8080:8080 --name app-backend-container app-backend:v1
 ```
 
 6. Test your application (access by a expose port)
