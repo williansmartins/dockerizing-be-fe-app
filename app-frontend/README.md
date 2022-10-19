@@ -7,7 +7,7 @@ https://labs.play-with-docker.com/
 
 2. Create a new project or downloading a existing project:
 ```
-cd app-frontend
+cd ~/dockerizing-be-fe-app/app-frontend
 ```
 
 3. Set a Docker file
