@@ -2,12 +2,12 @@ app.controller('ImagensController', function ($scope, $http) {
 
     $scope.imagens = new Object();
     $scope.albuns = new Object();
-
+    var url = 'http://localhost:8080';
 
     var buscarImagens = function () {
         $http({
             method: 'GET',
-            url: 'http://app-backend:8080/imagens'
+            url: url + '/imagens'
         }).then(function successCallback(response) {
             $scope.imagens = response.data;
         }, function errorCallback(response) {
@@ -18,7 +18,7 @@ app.controller('ImagensController', function ($scope, $http) {
     var buscarAlbuns = function () {
         $http({
             method: 'GET',
-            url: 'http://app-backend:8080/albuns'
+            url: url + '/albuns'
         }).then(function successCallback(response) {
             $scope.albuns = response.data;
         }, function errorCallback(response) {
@@ -29,7 +29,7 @@ app.controller('ImagensController', function ($scope, $http) {
     $scope.remover = function (id) {
         $http({
             method: 'DELETE',
-            url: 'http://app-backend:8080/imagens/' + id
+            url: url + '/imagens/' + id
         }).then(function successCallback(response) {
             $("#imagem_" + id).hide();
         }, function errorCallback(data, status, headers, config, statusText, xhrStatus) {
@@ -42,7 +42,7 @@ app.controller('ImagensController', function ($scope, $http) {
         if ($scope.idImagem == null) {
             $http({
                 method: 'POST',
-                url: 'http://app-backend:8080/imagens',
+                url: url + '/imagens',
                 data: { 'url': $scope.url }
             }).then(function successCallback(response) {
                 alert("sucesso!!"),
@@ -56,7 +56,7 @@ app.controller('ImagensController', function ($scope, $http) {
         else {
             $http({
                 method: 'PUT',
-                url: 'http://app-backend:8080/imagens/' + $scope.idImagem,
+                url: url + '/imagens/' + $scope.idImagem,
                 data: { 'url': $scope.url }
             }).then(function successCallback(response) {
                 alert("sucesso!!"),
