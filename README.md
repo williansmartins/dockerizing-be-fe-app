@@ -1,12 +1,9 @@
 # BE - Java
-```
-[link] (https://github.com/williansmartins/dockerizing-be-fe-app/blob/main/app-backend/README.md)
-```
+[Readme link](https://github.com/williansmartins/dockerizing-be-fe-app/blob/main/app-backend/README.md)
+
 
 # FE - AngularJS
-```
-README.md on frontend project
-```
+[Readme link](https://github.com/williansmartins/dockerizing-be-fe-app/blob/main/app-frontend/README.md)
 
 # Creating a network
 ```
