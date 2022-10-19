@@ -12,7 +12,7 @@ cd ~/dockerizing-be-fe-app/app-backend
 
 3. Set a Docker file
 ```
-<root folder>
+<already in root folder>
 ```
 
 4. Build an image
