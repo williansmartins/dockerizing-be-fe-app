@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deployment
+  namespace: "mysql-namespace"
+  labels:
+    app: mysql-label
+    app.kubernetes.io/name: mysql-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mysql-label
+  template:
+    metadata:
+      labels:
+        app: mysql-label
+    spec:
+      containers:
+      - name: mysql-app
+        image: williansmartins/app-mysql:v1
+        ports:
+          - containerPort: 8080
+  strategy:
+    type: RollingUpdate
+

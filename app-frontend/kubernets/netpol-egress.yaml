@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: "frontend-networkpolicy-egress"
+  namespace: "frontend-namespace"
+  labels:
+    app: frontend-label
+    app.kubernetes.io/name: frontend-app
+spec:
+  podSelector:
+    matchLabels:
+      app: frontend-label
+      app.kubernetes.io/name: frontend-app
+  policyTypes:
+  - Egress
+  egress:
+  - to:
+    - namespaceSelector:
+        matchLabels:
+          name: "backed-namespace"
+      podSelector:
+        matchLabels:
+          app: backed-label
+          app.kubernetes.io/name: backend-app
+    ports:
+      - protocol: TCP
+        port: 8080
