@@ -26,7 +26,7 @@ $ kubectl get pods --namespace=mysql-namespace
 $ kubectl delete pod frontend-deployment-7df796d778-jhwqx frontend-deployment-7df796d778-xzckv
 $ kubectl logs -f frontend-deployment-7df796d778-qdmjw
 $ kubectl logs -f backend-deployment-bb784c456-b4vzw
-$ kubectl exec -it frontend-deployment-7df796d778-qdmjw -- bin/sh
+$ kubectl exec -it backend-deployment-7d64b7866-kszhw frontend-deployment-7df796d778-qdmjw -- bin/sh
 $ minikube service frontend-service --url -n frontend-namespace
 $ minikube service backend-service --url -n backend-namespace
 $ docker image tag app-backend:v1 williansmartins/app-backend:v1
