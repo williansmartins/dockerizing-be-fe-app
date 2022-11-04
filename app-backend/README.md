@@ -18,6 +18,7 @@ cd ~/dockerizing-be-fe-app/app-backend
 4. Build an image
 ```
 docker build -t app-backend:v1 .
+docker image tag app-backend:v3 williansmartins/app-backend:v3
 ``` 
 
 5. Run a instance of image

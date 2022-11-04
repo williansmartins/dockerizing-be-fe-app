@@ -33,3 +33,7 @@ ou
 http://ip172-18-0-39-cd4qscv91rrg00c84k00-8085.direct.labs.play-with-docker.com/
 
 ```
+7. Acessando URL do frontend
+``` 
+  minikube service frontend-service --url -n frontend-namespace
+```

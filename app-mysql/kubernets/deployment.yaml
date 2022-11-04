@@ -19,6 +19,9 @@ spec:
       containers:
       - name: mysql-app
         image: williansmartins/app-mysql:v1
+        env:
+          - name: MYSQL_ROOT_PASSWORD
+            value: "mypassword"
         ports:
           - containerPort: 8080
   strategy:
